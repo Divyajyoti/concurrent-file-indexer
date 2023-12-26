@@ -1,7 +1,13 @@
-package org.fileindexer;
+package com.fileindexer;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
+        ST
+
     }
-}
+
+
+
+
+    }
