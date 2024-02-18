@@ -38,6 +38,7 @@ public class FileIndexer {
      * @params: source path of directory to be indexed
      */
     public void createIndex(String sourceDirPath) throws IOException {
+        //Todo: concurrent index
         Path path = Path.of(sourceDirPath);
         if (Files.isDirectory(path)) {
             Files.walkFileTree(path, new SimpleFileVisitor<Path>() {
@@ -61,6 +62,7 @@ public class FileIndexer {
     }
 
     private void indexFile(Path filePath) throws IOException {
+        //Todo: add index per page content
         Document document = getDocument(filePath.toFile());
         writer.addDocument(document);
     }
